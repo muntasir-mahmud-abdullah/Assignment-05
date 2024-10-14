@@ -4,11 +4,11 @@ document.getElementById("donation-btn").addEventListener("click", function () {
 document.getElementById("history-btn").addEventListener("click", function () {
   showBgById("history-btn");
 });
-document.querySelectorAll(".donate-btn").addEventListener("click", function () {
-  const donationAmount = InputValueById("donation-amount");
-  const donationBalance = InputTextById("donation-balance");
+function donatedButtonId(amountid, balanceid, donatedid) {
+  const donationAmount = InputValueById(amountid);
+  const donationBalance = InputTextById(balanceid);
 
-  let donatedMoney = InputTextById("donated-balance");
+  let donatedMoney = InputTextById(donatedid);
   if (
     donationAmount > donationBalance ||
     donationAmount <= 0 ||
@@ -37,4 +37,7 @@ document.querySelectorAll(".donate-btn").addEventListener("click", function () {
   const h6 = document.createElement("h6");
   h6.innerText = `${new Date()}`;
   document.getElementById("history-container").appendChild(h6);
+}
+document.getElementById("donate-btn").addEventListener("click", function () {
+  donatedButtonId("donation-amount", "donation-balance", "donated-balance");
 });
