@@ -4,9 +4,7 @@ document.getElementById("donation-btn").addEventListener("click", function () {
 document.getElementById("history-btn").addEventListener("click", function () {
   showBgById("history-btn");
 });
-
-document.getElementById("donate-btn").addEventListener("click", function () {
- 
+document.querySelectorAll(".donate-btn").addEventListener("click", function () {
   const donationAmount = InputValueById("donation-amount");
   const donationBalance = InputTextById("donation-balance");
 
@@ -23,7 +21,7 @@ document.getElementById("donate-btn").addEventListener("click", function () {
     alert("Invalid Amount");
     return;
   }
-  
+
   my_modal_1.showModal();
   const updateBalance = donationBalance - donationAmount;
   donatedMoney += donationAmount;

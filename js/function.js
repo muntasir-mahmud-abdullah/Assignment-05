@@ -18,4 +18,3 @@ function InputValueById(id){
 function InputTextById(id){
     return parseInt(document.getElementById(id).innerText);
 }
-
