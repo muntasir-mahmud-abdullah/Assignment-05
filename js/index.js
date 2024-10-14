@@ -25,8 +25,8 @@ function donatedButtonId(amountid, balanceid, donatedid) {
   my_modal_1.showModal();
   const updateBalance = donationBalance - donationAmount;
   donatedMoney += donationAmount;
-  document.getElementById("donation-balance").innerText = updateBalance;
-  document.getElementById("donated-balance").innerText = donatedMoney;
+  document.getElementById(balanceid).innerText = updateBalance;
+  document.getElementById(donatedid).innerText = donatedMoney;
   //   transaction updated
   const title = document.getElementById("flood-title").innerText;
   const p = document.createElement("p");
@@ -38,6 +38,21 @@ function donatedButtonId(amountid, balanceid, donatedid) {
   h6.innerText = `${new Date()}`;
   document.getElementById("history-container").appendChild(h6);
 }
-document.getElementById("donate-btn").addEventListener("click", function () {
-  donatedButtonId("donation-amount", "donation-balance", "donated-balance");
+document.getElementById("donate-btn1").addEventListener("click", function () {
+  donatedButtonId("donation-amount1", "donation-balance", "donated-balance1");
+});
+document.getElementById("donate-btn2").addEventListener("click", function () {
+  donatedButtonId("donation-amount2", "donation-balance", "donated-balance2");
+});
+document.getElementById("donate-btn3").addEventListener("click", function () {
+  donatedButtonId("donation-amount3", "donation-balance", "donated-balance3");
+});
+document.getElementById("donate-btn4").addEventListener("click", function () {
+  donatedButtonId("donation-amount4", "donation-balance", "donated-balance4");
+});
+document.getElementById("donate-btn5").addEventListener("click", function () {
+  donatedButtonId("donation-amount5", "donation-balance", "donated-balance5");
+});
+document.getElementById("donate-btn6").addEventListener("click", function () {
+  donatedButtonId("donation-amount6", "donation-balance", "donated-balance6");
 });
